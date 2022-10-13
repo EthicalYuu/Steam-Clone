@@ -1,0 +1,505 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+
+a{
+  text-decoration: none;
+  color:#c7d5e0;
+}
+
+body{
+  background-image: url("background.png");
+  background-color: #080404;
+  background-repeat: no-repeat;
+  height: 1250px;
+}
+
+ul{
+  list-style: none;
+}
+
+#navbar{
+  position: fixed;
+  width: 100vw;
+  background-color: #171a21;
+  color:#c7d5e0;
+}
+
+#nav-link-container{
+  display: flex;
+}
+
+.nav-link{
+  padding: 10px 20px 10px 20px;
+  font-family: Roboto;
+}
+
+#background-img{
+  position: absolute;
+  z-index: -1;
+}
+
+#main-container{
+  background-color: #1b2838;
+  width: 66vw;
+  height: 1200px;
+  margin: auto;
+  padding-top: 70px;
+}
+
+/* @media(max-width: 2000px){
+  #main-container{
+    width: 83vw;
+  }
+} */
+
+#pf-info{
+  display: grid;
+  margin-left: 25px;
+  grid-template-columns:164px 1.9fr 1.1fr;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#pf-pic-container{
+  border: grey 2px solid;
+  height: 164px;
+}
+
+#pf-pic{
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#name-nickname{
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight:400;
+  padding: 10px 0px 0px 15px;
+}
+
+#level-contact{
+  height: 164px;
+  width: 185px;
+}
+
+#nickname{
+  color: white;
+  font-size: 1.5em;
+}
+#name{
+  color: #898989;
+  font-size: 0.9em;
+}
+
+#level-container{
+  display: flex;
+  align-items: center;
+  color: white;
+  padding-top: 10px;
+}
+
+#level-txt{
+  font-size: 1.5em;
+  margin-right: 8px;
+}
+
+#level-no{
+  border: 3px #c02942 solid;
+  color: white;
+  border-radius: 50%;
+  display: inline-block;
+  padding: 7px 12px 7px 12px;
+}
+
+#btn-container{
+  display: grid;
+  grid-template-columns: 2.7fr 1.5fr 1.5fr;
+  margin-top: 10px;
+  gap: 3px;
+}
+
+.contact-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2b3444;
+  height: 30px;
+}
+
+.contact-btn > a{
+  text-decoration: none;
+  color: #c7d5e0;
+}
+
+#award-img{
+  height: 80%;
+}
+
+#recently-sidetemp{
+  margin-top: 40px;
+  display: flex;
+  gap: 12px;
+  padding: 0px 15px 0px 15px;
+}
+
+#recently-played{
+  display: grid;
+  grid-template-rows: 40px 140px 140px 140px 100px 50px 50px 20px;
+  gap: 20px;
+  width: 70%;
+}
+
+#sidetemp{
+  height: 900px;
+  background-color: #1c1c24;
+  width: 30%;
+}
+
+#status-online{
+  padding-top: 15px;
+  height: 70px;
+  /* background-color: yellow; */
+}
+
+#badges-title, 
+#games-title, 
+#inventory-title,
+#groups-title, 
+#friends-title{
+  color: white;
+  margin-left: 10px;
+}
+
+#friends-title-count{
+  display: flex;
+  color: pink;
+  /* background-color: antiquewhite; */
+  height: 35px;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+
+#friends-title{
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+}
+
+#friends-count{
+  /* background-color: blue; */
+  font-size: x-large;
+  color: white;
+}
+
+
+
+
+
+.friend-level-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  /* background-color: blueviolet; */
+}
+
+.friend-level-one-digit{
+  color: white;
+  border-radius: 50%;
+  display: inline-block;
+  padding: 7px 12px 7px 12px;
+  border: solid white 3px;
+}
+
+.friend-level-two-digit{
+  color: white;
+  border-radius: 50%;
+  display: inline-block;
+  padding: 8px 9px 8px 9px;
+  border: solid #c02942 3px;
+}
+
+#badges{
+  padding-top: 15px;
+  height: 100px;
+  /* background-color: orange; */
+}
+
+#games{
+  height: 50px;
+  /* background-color: green; */
+}
+
+#inventory{
+  height: 70px;
+  /* background-color: navy; */
+}
+
+#groups{
+  height: 160px;
+  /* background-color: aqua; */
+}
+
+#friends{
+  /* background-color: black; */
+}
+
+#friends-list{
+  /* background-color: green; */
+}
+
+.in-game-username{
+  color: #5c7e10;
+}
+
+.friend-entry{
+  /* background-color: yellowgreen; */
+  height: 40px;
+  display: grid;
+  grid-template-columns: 45px auto 45px;
+  margin-bottom: 15px;
+  padding-left: 15px;
+  padding-right: 10px;
+}
+
+.friend-photo-online{
+  height: 40px;
+  background-color: red;
+  border: #66c0f4 3px solid;
+}
+.friend-photo-offline{
+  height: 40px;
+  background-color: red;
+  border: grey 3px solid;
+}
+.friend-photo-in-game{
+  height: 40px;
+  background-color: red;
+  border: #98cc2f 3px solid;
+}
+
+.friend-name-online{
+  /* background-color: pink; */
+}
+
+.online{
+  color: #66c0f4;
+}
+
+.in-game{
+  color:#98cc2f;
+}
+
+.offline{
+  color: #898989;
+}
+
+
+.friend-entry-info{
+  word-spacing: 0.1em;
+  line-height: 1.1;
+  letter-spacing: 0.03em;
+  padding-left: 7px;
+  font-size: small;
+  margin: 0px 0px;
+}
+
+.friend-level{
+  background-color: blue;
+}
+
+#recent-activity{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #1c1c24;
+}
+
+.games{
+  display: flex;
+  flex-direction: column;
+  background-color: #1c1c24;
+  padding: 10px 10px 10px 10px;
+}
+
+#view-word{
+  color: #898989;
+}
+
+#all-recently-played{
+  color: #FFF;
+}
+
+#view-all-recently-played{
+  display: flex;
+  justify-content: flex-end;
+  height: 100px;
+}
+
+#comment-title-sub{
+  display: flex;
+  margin-bottom: 10px;
+  background-color: #1c1c24;
+  height: 50px;
+  column-gap: 5px;
+}
+
+#comment-title{
+  color: #898989;
+  /* background-color: yellow; */
+  padding-left: 10px;
+  padding-right: 5px;
+  margin: 7px 0px;
+  font-size: 25px;
+}
+
+#checkbox-container{
+  /* background-color: red; */
+  margin: auto 0px;
+}
+
+#subscribe-to-thread{
+  color: #898989;
+  /* background-color: green; */
+  font-size: 15px;
+  margin: auto 0px;
+}
+
+#comment-entry{
+  display: flex;
+  height: 40px;
+  padding: 5px 10px;
+  margin-bottom: 20px;
+}
+
+#comment-img{
+  height: 35px;
+  width: 35px;
+  margin-right: 10px;
+  background-color:green;
+  border: solid 2px#66c0f4;
+}
+ 
+#comment-text{
+  width: 100%;
+  padding-left: 10px;
+  color: #898989;
+  background-color: #1c1c24;
+  border: 0px none;
+}
+
+#line{
+  height: 1px;
+  width: 100%;
+  background-color: gray;
+}
+
+.game-pic-info{
+  display: grid;
+  grid-template-columns: 190px 1fr;
+}
+
+.game-pic-container{
+  background-color: orange;
+  height: 65px;
+}
+
+.game-pic{
+  width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.game-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-left: 10px;
+  height: 70px;
+}
+
+.game-name{
+  align-self: flex-start;
+  color: white;
+}
+
+.game-record{
+  align-self: flex-end;
+  color: #898989;
+}
+
+.game-last-played{
+  align-self: flex-end;
+  color: #898989;
+}
+
+.achievement-progress{
+  margin-top: 10px;
+  width: 100%;
+  height: 60px;
+  background-color: #2b3444;
+}
+
+#recent-activity-title,
+ #acc-status,
+ #last-online,
+ #recent-activity-time-played{
+  color:#898989;
+  font-size: 20px;
+}
+
+#recent-activity-title{
+  margin-left: 10px;
+  float: left;
+}
+
+#recent-activity-time-played{
+  margin-right: 10px;
+  float: right;
+}
+
+#acc-status{
+  margin-left: 11px;
+}
+
+
+#last-online{
+  margin-left: 10px;
+}
+
+#policy{
+  display: grid;
+  grid-template-columns:140px auto;
+  width: 66vw;
+  height: 90px;
+  margin: auto;
+  background-color: black;
+}
+
+#policy-text{
+  color: #898989;
+  padding-left: 10px;
+  margin: auto;
+}
+
+#policy-trademarks{
+  height: 100%;
+  margin-bottom: 10px;
+}
+
+#policy-logo{
+  display: flex;
+  padding: 20px;
+  background-color:black;
+}
+
+#DUBL-IMG{
+  max-width: 100%;  
+  height: auto; 
+}
+
+
+
+
